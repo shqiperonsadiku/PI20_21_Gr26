@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Assistant:400,700|Playfair+Display:900");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+    --clr-light: #f1f1f1;
+    --clr-dark: #111;
+    --clr-primary: #dbffa2;
+    --clr-secondary: rgba(0, 0, 0, 0.5);
+    --clr-accent: #fff;
+    --clr-bmishadow: #ee5253;
+    --clr-inputBmi: #222f3e;
+    --clr-resultBmi: #341f97;
+    --clr-postText: #000;
+    --clr-sidebar: #ddcdcd;
+  
+    --foreground: var(--clr-dark);
+    --background: var(--clr-light);
+    --shadow: var(--clr-secondary);
+    --shadowBmi: var(--clr-bmishadow);
+    --contactBackground: var(--clr-accent);
+    --inputColorBmi: var(--clr-inputBmi);
+    --resultBmi: var(--clr-resultBmi);
+    --postText: var(--clr-postText);
+    --postBackground: var(--clr-accent);
+    --sidebar: var(--clr-sidebar);
+    --footer: var(--clr-dark);
+  
+    --ff-title: "Playfair Display", serif;
+    --ff-body: "Assistant", sans-serif;
+  }
+  
+  .darkmode {
+    --clr-light: #f1f1f1;
+    --clr-dark: #111;
+    --clr-primary: #dbffa2;
+    --clr-secondary:  rgba(0, 0, 0, 0.5);
+    --clr-accent: #ff7750;
+    --clr-postText: #000;
+    --clr-darkSidebar: #333;
+  
+    --foreground: var(--clr-light);
+    --background: var(--clr-dark);
+    --shadow:  var(--clr-primary);
+    --shadowBmi: var(--clr-primary);
+    --contactBackground: var(--clr-dark);
+    --inputColorBmi: var(--clr-light);
+    --resultBmi: var(--clr-light);
+    --postText: var(--clr-light);
+    --postBackground: var(--postText);
+    --sidebar: var(--clr-darkSidebar);
+    --footer
+  }
+  
+  
+  /* body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--ff-body);
+    font-size: 18px;
+    line-height: 1.6;
+  } */
+  
+  h1 {
+    font-size: calc(3rem + 7vw);
+    font-family: var(--ff-title);
+    margin: 0 0 0.25em;
+    line-height: 1;
+  }
+  
+  .subtitle {
+    max-width: 600px;
+  }
+  
+  .btn-group {
+    margin: 2em 0;
+    display: relative;
+  }
+  
+  .intro {
+    height: 80vh;
+    padding: 10em 0;
+    display: grid;
+    grid-template-columns: minmax(2em, 1fr) minmax(80vw, 860px) minmax(2em, 1fr);
+    background: linear-gradient(120deg, var(--clr-primary), var(--clr-secondary));
+    align-content: center;
+  }
+  
+  .intro > * {
+    grid-column: 2 / 3;
+  }
+  
+  .dark-mode-toggle {
+    position: absolute;
+    z-index: 100;
+    top: 1em;
+    right: 1em;
+    color: var(--foreground);
+    border: 2px solid currentColor;
+    padding: 4px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 3px;
+    height: 3px;
+  }
