@@ -4,7 +4,7 @@ session_start();
 $errors = array('email'=>'', 'username'=>'', 'password'=>'');
 $host = 'localhost';
 $user = 'id15893390_userdb';
-$pass = 'Shqiperon123.';
+$pass = '';
 $db = 'id15893390_userregistration';
 $con =mysqli_connect($host, $user, $pass, $db);
 
