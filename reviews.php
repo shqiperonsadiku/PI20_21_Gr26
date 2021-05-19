@@ -15,7 +15,7 @@
     <script>
         $(document).ready(function() {
             var reviewsCount = 2;
-            $("button").click(function(){
+            $("#moreReviewsBtn").click(function(){
                 reviewsCount = reviewsCount + 2;
                 $("#post-content").load("load-reviews.php", {
                     reviewsNewCount: reviewsCount
@@ -58,7 +58,7 @@
                 ?>
             </div>
             <div class="title">
-            <button class="btn">More Reviews</button>
+            <button class="btn" id="moreReviewsBtn">More Reviews</button>
             </div>
         </div>
         <button id="dark-mode-toggle" class="dark-mode-toggle">
