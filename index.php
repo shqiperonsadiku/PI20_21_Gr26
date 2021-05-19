@@ -65,8 +65,8 @@
         </div>
         <div class="toggleMenu" onclick="toggleMenu();"></div>
         <ul class="navigation" id="navigation">
-            <li><a href="#banner">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="signup.html">Sign up</a></li>
+            <li><a href="login.html">Log in</a></li>
             <li><a href="#recipes">Recipes</a></li>
             <li><a href="#workouts">Workouts</a></li>
             <li><a href="#contact-section">Contact</a></li>
