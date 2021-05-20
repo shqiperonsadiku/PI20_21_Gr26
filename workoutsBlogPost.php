@@ -114,7 +114,7 @@
                 </div>
                 <div class="box">
                     <div class="imgBx">
-                        <a href="workoutsBlogPost.html"><img src="images/running.jpg"></a>
+                        <a href="workoutsBlogPost.php"><img src="images/running.jpg"></a>
                     </div>
                     <div class="text">
                         <h3>The best cardio workout</h3>
@@ -130,7 +130,7 @@
                 </div>
                 <div class="box">
                     <div class="imgBx">
-                        <a href="workoutsBlogPost.html"><img src="images/backgroundimg1.jpg"></a>
+                        <a href="workoutsBlogPost.php"><img src="images/backgroundimg1.jpg"></a>
                     </div>
                     <div class="text">
                         <h3>Rope Workout</h3>
