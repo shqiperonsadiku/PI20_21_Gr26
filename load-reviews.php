@@ -9,8 +9,7 @@
         while($row = mysqli_fetch_assoc($result)) {
             echo "<p>";
             echo $row['author'].":";
-            echo "<br>";
-            echo $row['message'];
+            echo "<br>";            
             echo $row['message']."<br><br>";
             echo "</p>";
         }
