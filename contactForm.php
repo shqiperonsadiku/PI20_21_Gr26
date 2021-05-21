@@ -77,8 +77,8 @@
                 <textarea name="message" class="input" placeholder="Message. . ." required></textarea>
             </div>
             <p>Check the box if you agree with our
-                <a href="termsConditons.html" target="_blank">Terms and Conditions</a> and
-                <a href="privacyPolicy.html" target="_blank">Privacy & Policy</a>
+                <a href="termsConditons.php" target="_blank">Terms and Conditions</a> and
+                <a href="privacyPolicy.php" target="_blank">Privacy & Policy</a>
                 <input class="tickInput" type="checkbox" name="termsAndConditions" value="Yes"> Yes
             </p>
             <div class="inputBox">
