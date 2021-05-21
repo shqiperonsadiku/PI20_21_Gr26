@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="workoutsBlogPost_style.css" rel="stylesheet" type="text/css">
+    <link href="recipesBlogPost_style.css" rel="stylesheet" type="text/css">
     <title>Health & Fitness</title>
     <link rel="icon" type="image/jpg" href="images/logo1.png" />
 </head>
@@ -44,7 +43,7 @@
     <div class="content" id="content">
         <div class="main-content single">
             <div class="post-image"></div>
-            <h2 class="post-title">Workout Article</h1>
+            <h2 class="post-title">Recipes Article</h1>
 
                 <div class="post-content">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem mollitia esse adipisci ad molestias.</p>
@@ -103,38 +102,48 @@
                 </div>
         </div>
         <div class="sidebar">
+
+
+            <!-- <div class="section popular">
+                <h2 class="section-title">Popular</h2>
+                
+                <div class="post clearfix">
+                    <img src="images/healthySmoothie.jpg" width="200" height="70">
+                    <a href="#" class="title">Healthy smoothie</a>
+                </div>
+            </div> -->
             <div class="section bigBox">
                 <h2 class="section-title">Popular Posts</h2>
                 <div class="box">
                     <div class="imgBx">
-                        <a href="recipesBlogPost.php"><img src="images/healthyPasta.jpg"></a>
+                        <a href="workoutsBlogPost.php"><img src="images/dumbbells.jpeg"></a>
                     </div>
                     <div class="text">
-                        <h3>Healthy Pasta</h3>
+                        <h3>Dumbbel Workouts</h3>
                     </div>
                 </div>
                 <div class="box">
                     <div class="imgBx">
-                        <a href="workoutsBlogPost.php"><img src="images/running.jpg"></a>
+                        <a href="recipesBlogPost.php"><img src="images/healthyFruitSalad.jpg"></a>
                     </div>
                     <div class="text">
-                        <h3>The best cardio workout</h3>
+                        <h3>Fruit Salad</h3>
                     </div>
                 </div>
                 <div class="box">
                     <div class="imgBx">
-                        <a href="recipesBlogPost.php"><img src="images/healthySushi.jpg"></a>
+                        <a href="workoutsBlogPost.php"><img src="images/yoga.jpg"></a>
                     </div>
                     <div class="text">
-                        <h3>Delicious Sushi</h3>
+                        <h3>Yoga</h3>
                     </div>
                 </div>
                 <div class="box">
                     <div class="imgBx">
-                        <a href="workoutsBlogPost.php"><img src="images/backgroundimg1.jpg"></a>
+                        <a href="recipesBlogPost.php"><img src="images/healthySmoothie.jpg"></a>
                     </div>
                     <div class="text">
-                        <h3>Rope Workout</h3>
+                        <h3>Delicious Smoothie</h3>
                     </div>
                 </div>
             </div>
@@ -211,10 +220,12 @@
             <div class="section topics">
                 <h2 class="section-title">Reviews</h2>
                 <ul>
-                    <li><a href="reviews.php" target="_blank">See reviews for this post!</a></li>
+                    <li><a href="reviews.php" target="blank_">See reviews for this post!</a></li>
                 </ul>
             </div>
         </div>
+
+
 
         <button id="dark-mode-toggle" class="dark-mode-toggle">
             <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
