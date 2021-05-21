@@ -7,53 +7,6 @@
     <link href="index_style.css" rel="stylesheet" type="text/css">
     <title>Health & Fitness</title>
     <link rel="icon" type="image/jpg" href="images/logo1.png" />
-    <!--<script>
-        
-        function submitClick() {
-            if (formValidation()) {
-                alert("Thank you for your time! Your details have been submitted!");
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        function formValidation() {
-            flag = true;
-
-            if (document.contactForm.name.value == "") {
-                alert("Please fill in your Name!");
-                flag = false;
-            }
-
-            // // Validate letters only for Name input
-            // if (!/^[a-zA-Z]*$/g.test(document.contactForm.name.value)) {
-            //     alert("Enter alphabetic characters as Name!");
-            //     flag = false;
-            // }
-            if (document.contactForm.email.value == false) {
-                alert("Email cannot be blank!");
-                flag = false;
-            } else if (!(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(contactForm.email.value)) //Regular expressions to validate email
-            {
-                // Validate emails
-                alert("Enter Valid Email Address!");
-                flag = false;
-
-            }
-
-            if (document.contactForm.termsAndConditions.checked == false) {
-                alert("Please check the Terms and Conditions box!");
-                flag = false;
-            }
-            if (document.contactForm.message.value == false) {
-                alert("Please write something in message section!");
-                flag = false;
-            }
-
-            return flag;
-        }
-    </script>-->
 </head>
 
 <body>
