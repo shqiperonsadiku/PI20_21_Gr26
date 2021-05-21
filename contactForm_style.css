@@ -30,6 +30,30 @@ body {
     padding: 30px 40px;
 }
 
+.green-text {
+    color: rgb(16, 152, 243);
+    font-family: myfont;
+    font-size: small;
+}
+
+.green-text p {
+    color: rgb(16, 152, 243);
+    font-family: myfont;
+    font-size: small;
+}
+
+.green-text a {
+    color: rgb(16, 152, 243);
+    font-family: myfont;
+    font-size: small;
+}
+
+.green-text a:hover {
+    color: rgb(16, 152, 243);
+    font-family: myfont;
+    font-size: small;
+}
+
 .contact-title {
     background-color: #f7f7f7;
     border-bottom: 1px solid #f0f0f0;

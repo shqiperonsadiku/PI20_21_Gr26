@@ -406,6 +406,30 @@ section {
     font-family: myfont;
 }
 
+.green-text {
+    color: rgb(16, 152, 243);
+    font-family: myfont;
+    font-size: small;
+}
+
+.green-text p {
+    color: rgb(16, 152, 243);
+    font-family: myfont;
+    font-size: small;
+}
+
+.green-text a {
+    color: rgb(16, 152, 243);
+    font-family: myfont;
+    font-size: small;
+}
+
+.green-text a:hover {
+    color: rgb(16, 152, 243);
+    font-family: myfont;
+    font-size: small;
+}
+
 .contactForm {
     padding: 75px 50px;
     background: var(--contactBackground);

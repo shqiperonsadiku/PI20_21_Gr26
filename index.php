@@ -7,7 +7,8 @@
     <link href="index_style.css" rel="stylesheet" type="text/css">
     <title>Health & Fitness</title>
     <link rel="icon" type="image/jpg" href="images/logo1.png" />
-    <script>
+    <!--<script>
+        
         function submitClick() {
             if (formValidation()) {
                 alert("Thank you for your time! Your details have been submitted!");
@@ -52,7 +53,7 @@
 
             return flag;
         }
-    </script>
+    </script>-->
 </head>
 
 <body>
@@ -231,7 +232,7 @@
             <p>If you have something to ask us, feel free to send us an email.</p>
         </div>
         <div class="contactForm">
-            <form id="contactForm" name="contactForm" method="post" action="contact.php" onsubmit="return formValidation();">
+            <form id="contactForm" name="contactForm" method="post" action="contact1.php" onsubmit="return formSubmit();">
                 <h3>Send Message</h3>
                 <div class="inputBox">
                     <input name="name" type="text" class="input" autocomplete="on" placeholder="Your Name">
@@ -244,6 +245,7 @@
                 </div>
                 <div class="inputBox">
                     <textarea name="message" placeholder="Message. . ." required></textarea>
+                    <div class="green-text"><p id="success"></p></div>
                 </div>
                 <p>Check the box if you agree with our
                     <a href="termsConditons.php" target="_blank">Terms and Conditions</a> and
@@ -255,6 +257,22 @@
                 </div>
             </form>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" >
+            function formSubmit(){
+                    $.ajax({
+                        type: 'POST',
+                        url: 'contact1.php',
+                        data:$('#contactForm').serialize(),
+                        success:function(response){
+                            $('#success').html(response);
+                            
+                        }
+                    });
+                    var form = document.getElementById('contactForm').reset();
+                    return false;
+                }
+        </script>
     </section>
     <div class="pop-up-bmi">
         <script type="text/javascript">

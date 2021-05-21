@@ -5,7 +5,7 @@
     <link href="contactForm_style.css" rel="stylesheet" type="text/css">
     <title>Contact | Health & Fitness</title>
     <link rel="icon" type="image/jpg" href="images/logo1.png" />
-    <script>
+    <!--<script>
         function submitClick() {
             if (formValidation()) {
                 alert("Thank you for your time! Your details have been submitted!");
@@ -52,7 +52,7 @@
 
             return flag;
         }
-    </script>
+    </script> -->
 </head>
 
 <body>
@@ -60,7 +60,7 @@
         <div class="contact-title">
             <h2 class="title-text"><span>C</span>ontact Us</h2>
         </div>
-        <form id="contactForm" name="contactForm" method="post" action="contact.php" onsubmit="return formValidation();">
+        <form id="contactForm" name="contactForm" method="post" action="contact1.php" onsubmit="return formSubmit();">
             <div class="inputBox">
                 <label>Name:</label>
                 <input name="name" id="name" type="text" class="input" autocomplete="on" placeholder="Required">
@@ -86,6 +86,22 @@
             </div>
         </form>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" >
+            function formSubmit(){
+                    $.ajax({
+                        type: 'POST',
+                        url: 'contact1.php',
+                        data:$('#contactForm').serialize(),
+                        success:function(response){
+                            $('#success').html(response);
+                            
+                        }
+                    });
+                    var form = document.getElementById('contactForm').reset();
+                    return false;
+                }
+        </script>
 </body>
 
 </html>
