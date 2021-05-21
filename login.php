@@ -63,7 +63,7 @@ if(isset($_POST['submit'])) {
                             <div class="red-text"><?php echo $errors['username']; ?></div>
                         </div>
                         <p class="signup-now">You don't have an account yet? <a href="signup.php" class="signup-nowlink">Sign Up</a> now!</p>
-                         <p class="signup-now">Or continue as a <a href="index.html" class="signup-nowlink">guest</a> </p>
+                         <p class="signup-now">Or continue as a <a href="index.php" class="signup-nowlink">guest</a> </p>
                         <button type="submit" name='submit' value='submit' class="btn btn-primary">Log in</button>
                     </form>
                 </div>
