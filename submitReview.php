@@ -21,7 +21,7 @@ if(!$conn){
         //$errors['name'] = 'Name is required! <br/>';
         echo '<br>'."Name is required!";
     }
-    if(!empty($_POST['name'])){
+    if(!empty($_POST['name']) && !empty($_POST['review'])){
         $s = " select * from usertable where username='$name'";
         $result = mysqli_query($conn, $s);
         $num = mysqli_num_rows($result);
