@@ -14,7 +14,7 @@ if(isset($_POST['submit'])) {
     if(empty($_POST['name'])) {
         $errors['name'] = 'Name is required! <br/>';
     } else {
-        $name = $_POST['name'];
+        $name =test_input($_POST['name']); // <----------- function call
         $s = " select * from usertable where username='$name'";
         $result = mysqli_query($conn, $s);
         $num = mysqli_num_rows($result);
@@ -25,14 +25,20 @@ if(isset($_POST['submit'])) {
 
     if(empty($_POST['review'])) {
         $errors['review'] = 'Review is required for submit! <br/>';
-    } else {
-        $review = $_POST['review'];
-                $reg = " insert into reviews(author, message) values ('$name', '$review')";
-                $errors['review'] =  'Review submitted successfully!';
-                mysqli_query($conn, $reg);
-                //$_SESSION['username'] = $username;
-                header('location:workoutsBlogPost.php');
-
+    }
+    if(!empty($_POST['name']) && $num != 0 && !empty($_POST['review'])){
+        $review = test_input($_POST['review']);
+        $reg = " insert into reviews(author, message) values ('$name', '$review')";
+        $successful['review'] =  'Review submitted successfully!';
+        mysqli_query($conn, $reg);
+        //$_SESSION['username'] = $username;
+        header('location:workoutsBlogPost.php');
+    }
+    function test_input($data){
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data; 
     }
 }
 

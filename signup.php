@@ -7,21 +7,21 @@ $host = 'localhost';
 $user = 'id15893390_userdb';
 $pass = '';
 $db = 'id15893390_userregistration';
-$con =mysqli_connect($host, $user, $pass, $db);
+$conn =mysqli_connect($host, $user, $pass, $db);
 
-mysqli_select_db($con, $db);
+mysqli_select_db($conn, $db);
 
 if(isset($_POST['submit'])) {    
     if(empty( $_POST['email'])) {
         $errors['email'] ='Email is required!<br/>';
     } else {
-        $email = $_POST['email'];
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
         
         if(!filter_var( $_POST['email'], FILTER_VALIDATE_EMAIL)){
             $errors['email'] = 'Enter a valid email address!';
         }else{
             $s = " select * from usertable where email='$email'";
-            $result = mysqli_query($con, $s);
+            $result = mysqli_query($conn, $s);
             $num = mysqli_num_rows($result);
             if($num == 1){    
                 $errors['email'] = 'You already have an account with this email!';
@@ -32,12 +32,12 @@ if(isset($_POST['submit'])) {
     if(empty($_POST['username'])) {
         $errors['username'] = 'Username is required! <br/>';
     } else {
-        $username = $_POST['username'];
+        $username = mysqli_real_escape_string($conn, $_POST['username']);
         if(!preg_match('/^[a-zA-z\s]+$/', $username)){
             $errors['username'] = 'Username must be letters and spaces only!';
         }else {
             $s = " select * from usertable where email='$email'";
-            $result = mysqli_query($con, $s);
+            $result = mysqli_query($conn, $s);
             $num = mysqli_num_rows($result);
             if($num == 1){    
                 $errors['username'] = 'Username already taken!';
@@ -48,21 +48,23 @@ if(isset($_POST['submit'])) {
     if(empty($_POST['password'])) {
         $errors['password'] = 'Password is required! <br/>';
     } else if(isset($_POST['password'])){
-        $password = $_POST['password'];
+        $password =mysqli_real_escape_string($conn, $_POST['password']);
         $number = preg_match('@[0-9]@', $password);
         $uppercase = preg_match('@[A-Z]@', $password);
         $lowercase = preg_match('@[a-z]@', $password);
         $specialChars = preg_match('@[^\w]@', $password);
         if(strlen($password) < 8 || !$number || !$uppercase || !$lowercase || !$specialChars){
             $errors['password'] =  'Password must be at least 8 characters in length and must contain at least one number, one upper case letter, one lower case letter and one special character.';
-        } else {
+        }
+        }
+    if( !empty( $_POST['email']) && filter_var( $_POST['email'], FILTER_VALIDATE_EMAIL) && $num != 1 && !empty($_POST['username']) && preg_match('/^[a-zA-z\s]+$/', $username) && !empty($_POST['password']) && strlen($password) > 8 && $number && $uppercase && $lowercase && $specialChars)
+    {
                 $passHashed = password_hash($password, PASSWORD_DEFAULT);
                 $reg = " insert into usertable(email, username, password) values ('$email', '$username','$passHashed')";
-                mysqli_query($con, $reg);
+                mysqli_query($conn, $reg);
                 //$_SESSION['username'] = $username;
                 header('location:login.php');
-            }
-        }
+    }
         
     }
 ?>

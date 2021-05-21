@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="workoutsBlogPost_style.css" rel="stylesheet" type="text/css">
     <title>Health & Fitness</title>
     <link rel="icon" type="image/jpg" href="images/logo1.png" />
@@ -174,7 +175,7 @@
             <div class="section topics">
                 <h2 class="section-title">Give us a review</h2>
                 <ul>
-                    <form action="submitReview.php" method="POST">
+                    <form action="submitReview.php" method="POST" id="reviewForm">
                         <div class="inputBox">
                             <label>Name:</label>
                             <input name="name" id="name" type="text" class="input" autocomplete="on" placeholder="Required">
@@ -182,7 +183,7 @@
                         </div>
                         <div class="inputBox">
                             <label>Review:</label>
-                            <textarea name="review" class="input" placeholder="Review. . ." required></textarea>
+                            <textarea name="review" id="review" class="input" placeholder="Review. . ." required></textarea>
                             <div class="red-text"><?php echo $errors['review']; ?></div>
                         </div>
                         <div class="inputBox">
@@ -191,6 +192,19 @@
                     </form>
                 </ul>
             </div>
+            <!-- 
+            <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+            <script type="text/javascript" >
+                function formSubmit(){
+                    $.ajax({
+                        type: 'POST',
+                        url: 'submitReview.php',
+                        data:$('#reviewForm').serialize()
+                    });
+                    var form = document.getElementById('reviewForm').reset();
+                    return false;
+                }
+            </script>-->
             <div class="section topics">
                 <h2 class="section-title">Reviews</h2>
                 <ul>
