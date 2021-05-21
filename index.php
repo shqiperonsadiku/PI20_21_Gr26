@@ -215,7 +215,7 @@
             function formSubmit(){
                     $.ajax({
                         type: 'POST',
-                        url: 'contact1.php',
+                        url: 'contact.php',
                         data:$('#contactForm').serialize(),
                         success:function(response){
                             $('#success').html(response);

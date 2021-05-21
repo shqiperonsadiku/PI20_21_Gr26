@@ -16,8 +16,8 @@ if(isset($_POST['submit'])) {
         $errors['email'] ='Email is required!<br/>';
     } else {
         $email = mysqli_real_escape_string($conn, $_POST['email']);
-        
-        if(!filter_var( $_POST['email'], FILTER_VALIDATE_EMAIL)){
+        $regex = '/^([a-zA-Z0-9\._]+@+[a-zA-Z\.-]+(\.)+[a-zA-Z]{2,3})$/';
+        if(!preg_match($regex, $email)){
             $errors['email'] = 'Enter a valid email address!';
         }else{
             $s = " select * from usertable where email='$email'";
@@ -57,7 +57,7 @@ if(isset($_POST['submit'])) {
             $errors['password'] =  'Password must be at least 8 characters in length and must contain at least one number, one upper case letter, one lower case letter and one special character.';
         }
         }
-    if( !empty( $_POST['email']) && filter_var( $_POST['email'], FILTER_VALIDATE_EMAIL) && $num != 1 && !empty($_POST['username']) && preg_match('/^[a-zA-z\s]+$/', $username) && !empty($_POST['password']) && strlen($password) > 8 && $number && $uppercase && $lowercase && $specialChars)
+    if( !empty( $_POST['email']) && preg_match($regex, $email) && $num != 1 && !empty($_POST['username']) && preg_match('/^[a-zA-z\s]+$/', $username) && !empty($_POST['password']) && strlen($password) > 8 && $number && $uppercase && $lowercase && $specialChars)
     {
                 $passHashed = password_hash($password, PASSWORD_DEFAULT);
                 $reg = " insert into usertable(email, username, password) values ('$email', '$username','$passHashed')";
