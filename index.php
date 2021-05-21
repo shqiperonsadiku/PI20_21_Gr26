@@ -232,7 +232,7 @@
             <p>If you have something to ask us, feel free to send us an email.</p>
         </div>
         <div class="contactForm">
-            <form id="contactForm" name="contactForm" method="post" action="contact1.php" onsubmit="return formSubmit();">
+            <form id="contactForm" name="contactForm" method="post" action="contact.php" onsubmit="return formSubmit();">
                 <h3>Send Message</h3>
                 <div class="inputBox">
                     <input name="name" type="text" class="input" autocomplete="on" placeholder="Your Name">

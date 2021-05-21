@@ -60,7 +60,7 @@
         <div class="contact-title">
             <h2 class="title-text"><span>C</span>ontact Us</h2>
         </div>
-        <form id="contactForm" name="contactForm" method="post" action="contact1.php" onsubmit="return formSubmit();">
+        <form id="contactForm" name="contactForm" method="post" action="contact.php" onsubmit="return formSubmit();">
             <div class="inputBox">
                 <label>Name:</label>
                 <input name="name" id="name" type="text" class="input" autocomplete="on" placeholder="Required">
